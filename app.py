@@ -6,11 +6,18 @@ from fetch_last_broadcast import fetch_last_broadcast
 from iterate_live_moderator import iterate_live_moderator
 from store_live_moderator import store_live_moderator
 from errors import ChannelDetailNotFound, LastBroadcastNotFound
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--credential', '-c', help='Use credential file')
+args = parser.parse_args()
 
 
 # Main function
 if __name__ == '__main__':
-    youtube_api = auth.fetch_user_credential()
+    arg_credential = args.credential
+    youtube_api = auth.fetch_user_credential(arg_credential)
     try:
         channel_details = fetch_channel_detail(youtube_api)
         if len(channel_details) > 0:
