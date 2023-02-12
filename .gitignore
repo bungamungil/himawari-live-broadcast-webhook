@@ -1,0 +1,4 @@
+/db.json
+/client_secret.json
+*.sqlite
+.idea/
