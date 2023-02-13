@@ -3,11 +3,6 @@ class ChannelDetailNotFound(Exception):
         pass
 
 
-class LastBroadcastNotFound(Exception):
-    def __init__(self):
-        pass
-
-
 class DatabaseConfigNotFound(Exception):
     def __init__(self):
         pass
