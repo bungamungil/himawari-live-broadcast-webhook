@@ -11,3 +11,8 @@ class DatabaseConfigNotFound(Exception):
 class UndefinedDatabaseConnectionType(Exception):
     def __init__(self):
         pass
+
+
+class ConfigNotFound(Exception):
+    def __init__(self):
+        pass
